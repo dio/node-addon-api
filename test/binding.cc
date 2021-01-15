@@ -33,6 +33,7 @@ Object InitDataViewReadWrite(Env env);
 Object InitError(Env env);
 Object InitExternal(Env env);
 Object InitFunction(Env env);
+Object InitGlobal(Env env);
 Object InitHandleScope(Env env);
 Object InitMemoryManagement(Env env);
 Object InitName(Env env);
@@ -99,6 +100,7 @@ Object Init(Env env, Object exports) {
   exports.Set("error", InitError(env));
   exports.Set("external", InitExternal(env));
   exports.Set("function", InitFunction(env));
+  exports.Set("global", InitGlobal(env));
   exports.Set("name", InitName(env));
   exports.Set("handlescope", InitHandleScope(env));
   exports.Set("memory_management", InitMemoryManagement(env));
